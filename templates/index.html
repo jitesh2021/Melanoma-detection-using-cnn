@@ -1,0 +1,48 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Name</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- <link rel="stylesheet" href="../static/style.css"> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
+</head>
+ <body>
+  
+  <br>
+  <div style="background-color: aliceblue; width: 55%; height:100%; margin: 0 auto; padding: 10px">
+<center><img id="img_blood" style="width: 250px; height: 250px;" src="../static/img_234957.png"></center>
+<br>
+
+<br>
+<form action="/pred" method="POST" enctype="multipart/form-data" id="form">
+    <center><input type="file" id="myImage" name="myImage" onchange="showPreview(event);"></center>
+    <br>
+    <center><input  type="submit" value="Submit"></center>
+</form>
+<br>
+<br>
+</div>
+<br><br>
+<div>
+  <center><div id="res" style="background-color: aliceblue; min-width: 350px; max-width:350px; min-height:150px; border: 1px solid black; border-radius: 5px;"></div></center>
+</div>
+  <!-- <button class="btn_detection" >
+    DETECTION FOR CANCER
+    </button>
+  <button id="textButton" >
+    RESULT
+  </button> -->
+  
+
+
+  <script src="{{ url_for('static', filename='script.js') }}">
+    // <script src="../static/script.js"></script>
+    
+  </script>
+</body>
